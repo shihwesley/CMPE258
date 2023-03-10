@@ -21,9 +21,14 @@
     },
     "vscode": {
       "extensions": [
-        "ms-toolsai.jupyter",
-        "ms-python.python"
-      ]
+		"ms-toolsai.jupyter",
+		"ms-python.python",
+		"GitHub.copilot",
+		"VisualStudioExptTeam.vscodeintellicode",
+		"KevinRose.vsc-python-indent",
+		"njpwerner.autodocstring",
+		"donjayamanne.python-environment-manager"
+	]
     }
   }
 }
