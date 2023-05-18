@@ -1,0 +1,241 @@
+{
+  "0": {
+    "task": {
+      "task": "image-to-text",
+      "id": 0,
+      "dep": [
+        -1
+      ],
+      "args": {
+        "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/3970/production/_108240741_beatles-abbeyroad-square-reuters-applecorps.jpg"
+      }
+    },
+    "inference result": {
+      "generated text": "people crossing a street at night "
+    },
+    "choose model result": {
+      "id": "ydshieh/vit-gpt2-coco-en",
+      "reason": "Only one model available."
+    }
+  },
+  "1": {
+    "task": {
+      "task": "object-detection",
+      "id": 1,
+      "dep": [
+        -1
+      ],
+      "args": {
+        "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/3970/production/_108240741_beatles-abbeyroad-square-reuters-applecorps.jpg"
+      }
+    },
+    "inference result": {
+      "generated image with predicted box": "/images/da84.jpg",
+      "predicted": [
+        {
+          "score": 0.9483453631401062,
+          "label": "car",
+          "box": {
+            "xmin": 531,
+            "ymin": 448,
+            "xmax": 553,
+            "ymax": 468
+          }
+        },
+        {
+          "score": 0.9216774702072144,
+          "label": "truck",
+          "box": {
+            "xmin": 609,
+            "ymin": 449,
+            "xmax": 699,
+            "ymax": 532
+          }
+        },
+        {
+          "score": 0.9972169399261475,
+          "label": "car",
+          "box": {
+            "xmin": 175,
+            "ymin": 475,
+            "xmax": 309,
+            "ymax": 584
+          }
+        },
+        {
+          "score": 0.9993860721588135,
+          "label": "person",
+          "box": {
+            "xmin": 279,
+            "ymin": 490,
+            "xmax": 452,
+            "ymax": 837
+          }
+        },
+        {
+          "score": 0.9968711733818054,
+          "label": "person",
+          "box": {
+            "xmin": 732,
+            "ymin": 459,
+            "xmax": 755,
+            "ymax": 529
+          }
+        },
+        {
+          "score": 0.9580657482147217,
+          "label": "tie",
+          "box": {
+            "xmin": 381,
+            "ymin": 556,
+            "xmax": 421,
+            "ymax": 674
+          }
+        },
+        {
+          "score": 0.9628205895423889,
+          "label": "car",
+          "box": {
+            "xmin": 575,
+            "ymin": 461,
+            "xmax": 609,
+            "ymax": 498
+          }
+        },
+        {
+          "score": 0.9401124119758606,
+          "label": "car",
+          "box": {
+            "xmin": 530,
+            "ymin": 447,
+            "xmax": 551,
+            "ymax": 467
+          }
+        },
+        {
+          "score": 0.9736957550048828,
+          "label": "car",
+          "box": {
+            "xmin": 566,
+            "ymin": 454,
+            "xmax": 602,
+            "ymax": 489
+          }
+        },
+        {
+          "score": 0.9996776580810547,
+          "label": "person",
+          "box": {
+            "xmin": 459,
+            "ymin": 501,
+            "xmax": 712,
+            "ymax": 858
+          }
+        },
+        {
+          "score": 0.9993550181388855,
+          "label": "person",
+          "box": {
+            "xmin": 665,
+            "ymin": 489,
+            "xmax": 886,
+            "ymax": 866
+          }
+        },
+        {
+          "score": 0.9916452765464783,
+          "label": "car",
+          "box": {
+            "xmin": 379,
+            "ymin": 459,
+            "xmax": 422,
+            "ymax": 499
+          }
+        },
+        {
+          "score": 0.9646316766738892,
+          "label": "car",
+          "box": {
+            "xmin": 593,
+            "ymin": 464,
+            "xmax": 627,
+            "ymax": 513
+          }
+        },
+        {
+          "score": 0.9945524334907532,
+          "label": "car",
+          "box": {
+            "xmin": 460,
+            "ymin": 447,
+            "xmax": 483,
+            "ymax": 466
+          }
+        },
+        {
+          "score": 0.999705970287323,
+          "label": "person",
+          "box": {
+            "xmin": 56,
+            "ymin": 487,
+            "xmax": 268,
+            "ymax": 857
+          }
+        },
+        {
+          "score": 0.9624622464179993,
+          "label": "car",
+          "box": {
+            "xmin": 610,
+            "ymin": 450,
+            "xmax": 699,
+            "ymax": 533
+          }
+        }
+      ]
+    },
+    "choose model result": {
+      "id": "facebook/detr-resnet-101",
+      "reason": "Only one model available."
+    }
+  },
+  "2": {
+    "task": {
+      "task": "visual-question-answering",
+      "id": 2,
+      "dep": [
+        1
+      ],
+      "args": {
+        "image": "https://ichef.bbci.co.uk/news/976/cpsprodpb/3970/production/_108240741_beatles-abbeyroad-square-reuters-applecorps.jpg",
+        "text": "What is in this photo?"
+      }
+    },
+    "inference result": [
+      {
+        "score": 0.8603975772857666,
+        "answer": "people"
+      },
+      {
+        "score": 0.2614607512950897,
+        "answer": "crosswalk"
+      },
+      {
+        "score": 0.11722543090581894,
+        "answer": "street"
+      },
+      {
+        "score": 0.08384347707033157,
+        "answer": "pedestrians"
+      },
+      {
+        "score": 0.03230563551187515,
+        "answer": "men"
+      }
+    ],
+    "choose model result": {
+      "id": "dandelin/vilt-b32-finetuned-vqa",
+      "reason": "Only one model available."
+    }
+  }
+}
